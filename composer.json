@@ -1,0 +1,20 @@
+{
+  "name": "november-five/lib_serverside_loggingbundle",
+  "description": "Extends the logging with extra information and possibilities",
+  "homepage": "https://bitbucket.org/appstrakt",
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:appstrakt/lib_serverside_loggingbundle.git"
+    }
+  ],
+  "minimum-stability": "alpha",
+  "autoload": {
+    "psr-0": {
+      "NovemberFive\\LoggingBundle": ""
+    }
+  }
+}
