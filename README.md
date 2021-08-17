@@ -1,24 +1,24 @@
-November Five - Logging Bundle
+Skidder
 ==============================
 
-This bundle provides you with a set of tools to extend logging functionality.
+Skidder will drag your logs to where they need to go. A small, uniform and extensible logging library, implemented across major technologies.
 
 Setup
 -----
 ### Composer
 
-        "november-five/lib_serverside_loggingbundle": "*.*.*"
+        "november-five/skidder": "*.*.*"
 
         "repositories": [
             {
                 "type": "vcs",
-                "url": "git@bitbucket.org:appstrakt/lib_serverside_loggingbundle.git"
+                "url": "git@github.com:novemberfiveco/skidder-php.git"
             }
         ],
 
 ### AppKernel
 
-      new NovemberFive\LoggingBundle\NovemberFiveLoggingBundle()
+      new Skidder\SkidderBundle()
 
 
 Send user id in log
@@ -31,14 +31,14 @@ This will use a formatter with an extra block at the end. This extra block is us
     monolog:
         handlers:
             main:
-                formatter: novemberfive_logging.monolog.formatter
+                formatter: skidder.monolog.formatter
                 
 Send request id in log
 ----------------------
 
 If you want to add a request id to the logs, please add the following to your config.yml file
  
-    november_five_logging: 
+    skidder: 
        request_id_header: 'x-Request-ID'
                 
 NewRelicPass
@@ -50,23 +50,8 @@ Monolog will no longer throw an exception but just `return`.
 
 Releases
 -------------------
-__1.3.0 (2021/06/21)__
+__2.0.0 (2021/08/17)__
+* Renamed bundle to Skidder
 
-* Add filename and linenumber
-
-__1.2.1 (2021/04/30)__
-
-* Merge "data" key on logger "context" with the "data" key getting set in the processors
-* Unset "extra" key on record
-
-__1.2.0 (2021/04/13)__
-
-* Added new configuration to format as json according to our new guidelines:  https://appstrakt.atlassian.net/wiki/spaces/DOTECH/pages/2766143566/Standard+logging+conventions
-
-__1.1.0 (2018/08/01)__
-
-* Added configuration for request ID
-
-__1.0.0 (2017/11/24)__
-
-* Added NewRelicPass
+__1.0.0 (2021/06/21)__
+* Initial version

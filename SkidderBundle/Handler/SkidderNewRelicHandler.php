@@ -1,10 +1,10 @@
 <?php
 
-namespace NovemberFive\LoggingBundle\Handler;
+namespace SkidderBundle\Handler;
 
 use Monolog\Handler\NewRelicHandler;
 
-class NovemberFiveNewRelicHandler extends NewRelicHandler
+class SkidderNewRelicHandler extends NewRelicHandler
 {
     final protected function write(array $record)
     {

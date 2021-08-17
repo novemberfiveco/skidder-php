@@ -1,22 +1,10 @@
 <?php
-/**
- * This file is part of LoggingBundle.
- *
- * (c) 2016 November Five BVBA
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
-namespace NovemberFive\LoggingBundle\Processor;
+namespace SkidderBundle\Processor;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-/**
- * Class SessionRequestProcessor
- * @package NovemberFive\LoggingBundle\Processor
- */
 class SessionRequestProcessor
 {
     /**

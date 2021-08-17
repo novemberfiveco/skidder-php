@@ -1,14 +1,6 @@
 <?php
-/**
- * This file is part of LoggingBundle.
- *
- * (c) 2016 November Five BVBA
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
-namespace NovemberFive\LoggingBundle\DependencyInjection;
+namespace SkidderBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -21,7 +13,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('novemberfive_logging');
+        $rootNode = $treeBuilder->root('skidder');
         $rootNode
             ->children()
                 ->scalarNode('request_id_header')

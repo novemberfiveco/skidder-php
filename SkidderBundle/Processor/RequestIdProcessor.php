@@ -1,21 +1,8 @@
 <?php
-/**
- * This file is part of LoggingBundle.
- *
- * (c) 2018 November Five BVBA
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
-
-namespace NovemberFive\LoggingBundle\Processor;
+namespace SkidderBundle\Processor;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-
-/**
- * @package NovemberFive\LoggingBundle\Processor
- */
 class RequestIdProcessor
 {
     private $requestStack;

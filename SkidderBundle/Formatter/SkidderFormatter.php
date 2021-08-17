@@ -1,23 +1,11 @@
 <?php
-/**
- * This file is part of LoggingBundle.
- *
- * (c) 2018 November Five BVBA
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
-
-namespace NovemberFive\LoggingBundle\Formatter;
+namespace SkidderBundle\Formatter;
 
 
 use Monolog\Formatter\JsonFormatter;
 
-/**
- * @package NovemberFive\LoggingBundle\Formatter
- */
-class NovemberFiveFormatter extends JsonFormatter
+class SkidderFormatter extends JsonFormatter
 {
     const LOGGING_SOURCE_APPLICATION = "application";
     const LOGGING_SOURCE_LIBRARY = "library";

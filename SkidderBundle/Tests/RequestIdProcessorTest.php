@@ -1,16 +1,8 @@
 <?php
-/**
- * This file is part of LoggingBundle.
- *
- * (c) 2018 November Five BVBA
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
-namespace NovemberFive\LoggingBundle\Tests;
+namespace SkidderBundle\Tests;
 
-use NovemberFive\LoggingBundle\Processor\RequestIdProcessor;
+use SkidderBundle\Processor\RequestIdProcessor;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophet;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
