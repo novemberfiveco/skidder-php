@@ -18,7 +18,7 @@ Setup
 
 ### AppKernel
 
-      new Skidder\SkidderBundle()
+      new NovemberFive\SkidderBundle\NovemberFiveSkidderBundle()
 
 
 Send user id in log
