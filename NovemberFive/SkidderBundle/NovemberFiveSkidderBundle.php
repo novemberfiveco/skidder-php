@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle;
+namespace NovemberFive\SkidderBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Skidder\DependencyInjection\Compiler\NewRelicPass;
