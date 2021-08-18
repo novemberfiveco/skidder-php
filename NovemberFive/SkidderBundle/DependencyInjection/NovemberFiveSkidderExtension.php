@@ -7,7 +7,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class SkidderLoggingExtension extends Extension
+class NovemberFiveSkidderExtension extends Extension
 {
     /**
      * {@inheritdoc}
