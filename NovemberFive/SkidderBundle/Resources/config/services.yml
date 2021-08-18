@@ -2,6 +2,7 @@ services:
     skidder.monolog.formatter:
         class: NovemberFive\SkidderBundle\Formatter\SkidderFormatter
         arguments: [ '%kernel.environment%']
+        public: true
 
     skidder.processor.session_request:
         class: NovemberFive\SkidderBundle\Processor\SessionRequestProcessor
