@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\DependencyInjection\Compiler;
+namespace Skidder\SkidderBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

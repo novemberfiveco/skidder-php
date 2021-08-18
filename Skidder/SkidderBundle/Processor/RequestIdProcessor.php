@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\Processor;
+namespace Skidder\SkidderBundle\Processor;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class RequestIdProcessor

@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\Tests;
+namespace Skidder\SkidderBundle\Tests;
 
 use SkidderBundle\Processor\RequestIdProcessor;
 use PHPUnit\Framework\TestCase;
