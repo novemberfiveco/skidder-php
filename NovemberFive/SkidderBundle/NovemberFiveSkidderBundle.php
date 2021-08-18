@@ -6,7 +6,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Skidder\DependencyInjection\Compiler\NewRelicPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class SkidderBundle extends Bundle
+class NovemberFiveSkidderBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

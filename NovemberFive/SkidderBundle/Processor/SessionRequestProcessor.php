@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\Processor;
+namespace NovemberFive\SkidderBundle\Processor;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;

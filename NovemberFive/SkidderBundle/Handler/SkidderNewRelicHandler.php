@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\Handler;
+namespace NovemberFive\SkidderBundle\Handler;
 
 use Monolog\Handler\NewRelicHandler;
 

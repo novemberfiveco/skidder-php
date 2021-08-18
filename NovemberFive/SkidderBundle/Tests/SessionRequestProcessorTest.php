@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\Tests;
+namespace NovemberFive\SkidderBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\HttpFoundation\Session\Session;

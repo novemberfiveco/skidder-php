@@ -1,8 +1,8 @@
 <?php
 
-namespace SkidderBundle\Tests;
+namespace NovemberFive\SkidderBundle\Tests;
 
-use SkidderBundle\Processor\RequestIdProcessor;
+use NovemberFive\SkidderBundle\Processor\RequestIdProcessor;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophet;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;

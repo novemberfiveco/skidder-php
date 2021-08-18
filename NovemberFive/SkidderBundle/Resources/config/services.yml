@@ -1,16 +1,16 @@
 services:
     skidder.monolog.formatter:
-        class: SkidderBundle\Formatter\SkidderFormatter
+        class: NovemberFive\SkidderBundle\Formatter\SkidderFormatter
         arguments: [ '%kernel.environment%']
 
     skidder.processor.session_request:
-        class: SkidderBundle\Processor\SessionRequestProcessor
+        class: NovemberFive\SkidderBundle\Processor\SessionRequestProcessor
         arguments:  ['@session', '@security.token_storage', '%skidder.log_session_token%']
         tags:
             - { name: monolog.processor, method: processRecord }
 
     skidder.processor.request_id:
-        class: SkidderBundle\Processor\RequestIdProcessor
+        class: NovemberFive\SkidderBundle\Processor\RequestIdProcessor
         arguments:  ['@request_stack', '%skidder.request_id_header%']
         tags:
             - { name: monolog.processor, method: processRequest }

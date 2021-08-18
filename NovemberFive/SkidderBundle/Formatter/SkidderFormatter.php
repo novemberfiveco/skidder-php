@@ -1,6 +1,6 @@
 <?php
 
-namespace SkidderBundle\Formatter;
+namespace NovemberFive\SkidderBundle\Formatter;
 
 
 use Monolog\Formatter\JsonFormatter;
