@@ -50,6 +50,11 @@ Monolog will no longer throw an exception but just `return`.
 
 Releases
 -------------------
+__2.1.0 (2024/12/12)__
+* Fixed deprecations
+* Added support for Symfony 5
+* Bumped PHP min version to 7.0
+
 __2.0.0 (2021/08/17)__
 * Renamed bundle to Skidder
 
