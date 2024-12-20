@@ -25,7 +25,7 @@ class SkidderFormatter extends JsonFormatter
         parent::__construct();
     }
 
-    public function format(array $record)
+    public function format(array $record): string
     {
         $record['level'] = strtolower($record['level_name']);
         $record['timestamp'] = $record['datetime']->format(\DateTime::ATOM);
