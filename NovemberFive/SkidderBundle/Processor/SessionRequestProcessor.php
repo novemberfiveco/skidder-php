@@ -8,19 +8,9 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 class SessionRequestProcessor
 {
     /**
-     * @var SessionInterface
-     */
-    private $session;
-
-    /**
      * @var string
      */
     private $token;
-
-    /**
-     * @var TokenStorageInterface
-     */
-    private $tokenStorage;
 
     /**
      * @var string|object
@@ -28,15 +18,12 @@ class SessionRequestProcessor
     private $user;
 
     /**
-     * @var bool
+     * @param bool $logSessionToken
      */
     private $logSessionToken;
 
-    public function __construct(SessionInterface $session, TokenStorageInterface $tokenStorage, $logSessionToken = true)
+    public function __construct(private readonly SessionInterface $session, private readonly TokenStorageInterface $tokenStorage, private $logSessionToken = true)
     {
-        $this->session         = $session;
-        $this->tokenStorage    = $tokenStorage;
-        $this->logSessionToken = $logSessionToken;
     }
 
     /**
@@ -51,7 +38,7 @@ class SessionRequestProcessor
                 try {
                     $this->session->start();
                     $this->token = substr($this->session->getId(), 0, 8);
-                } catch (\RuntimeException $e) {
+                } catch (\RuntimeException) {
                     $this->token = '????????';
                 }
             }

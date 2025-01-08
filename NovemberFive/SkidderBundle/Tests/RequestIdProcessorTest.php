@@ -20,7 +20,7 @@ class RequestIdProcessorTest extends KernelTestCase
 
     public function setUp()
     {
-        $this->prophet              = new Prophet();
+        $this->prophet = new Prophet();
     }
 
     /**
@@ -28,24 +28,24 @@ class RequestIdProcessorTest extends KernelTestCase
      */
     public function testProcessRequestWithHeader()
     {
-        $request            = $this->prophesize(Request::class);
-        $headerbag          = $this->prophesize(HeaderBag::class);
-        $requestStack       = $this->prophesize(RequestStack::class);
+        $request      = $this->prophesize(Request::class);
+        $headerbag    = $this->prophesize(HeaderBag::class);
+        $requestStack = $this->prophesize(RequestStack::class);
 
         $headerbag->get('x-Request-ID')->shouldBeCalled()->willReturn('1111');
-        $request->headers   = $headerbag;
+        $request->headers = $headerbag;
 
         $requestStack->getCurrentRequest()->shouldBeCalled()->willReturn($request);
 
         $requestIdProcessor = new RequestIdProcessor($requestStack->reveal(), 'x-Request-ID');
 
-        $expected = array(
-            'data' => array(
-                'request_id' => '1111'
-            )
-        );
+        $expected = [
+            'data' => [
+                'request_id' => '1111',
+            ],
+        ];
 
-        $result             = $requestIdProcessor->processRequest(array());
+        $result = $requestIdProcessor->processRequest([]);
 
         $this->assertEquals($expected, $result);
     }
@@ -55,16 +55,16 @@ class RequestIdProcessorTest extends KernelTestCase
      */
     public function testProcessRequestWithoutHeader()
     {
-        $headerbag          = $this->prophesize(HeaderBag::class);
-        $requestStack       = $this->prophesize(RequestStack::class);
+        $headerbag    = $this->prophesize(HeaderBag::class);
+        $requestStack = $this->prophesize(RequestStack::class);
 
         $headerbag->get('x-Request-ID')->shouldNotBeCalled();
         $requestStack->getCurrentRequest()->shouldNotBeCalled();
 
         $requestIdProcessor = new RequestIdProcessor($requestStack->reveal(), null);
 
-        $expected           = array();
-        $result             = $requestIdProcessor->processRequest(array());
+        $expected = [];
+        $result   = $requestIdProcessor->processRequest([]);
 
         $this->assertEquals($expected, $result);
     }
@@ -74,16 +74,16 @@ class RequestIdProcessorTest extends KernelTestCase
      */
     public function testProcessRequestWithoutCurrentRequest()
     {
-        $headerbag          = $this->prophesize(HeaderBag::class);
-        $requestStack       = $this->prophesize(RequestStack::class);
+        $headerbag    = $this->prophesize(HeaderBag::class);
+        $requestStack = $this->prophesize(RequestStack::class);
 
         $headerbag->get('x-Request-ID')->shouldNotBeCalled();
         $requestStack->getCurrentRequest()->shouldBeCalled()->willReturn(null);
 
         $requestIdProcessor = new RequestIdProcessor($requestStack->reveal(), 'x-Request-ID');
 
-        $expected           = array();
-        $result             = $requestIdProcessor->processRequest(array());
+        $expected = [];
+        $result   = $requestIdProcessor->processRequest([]);
 
         $this->assertEquals($expected, $result);
     }

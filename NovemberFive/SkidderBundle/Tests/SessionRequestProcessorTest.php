@@ -32,15 +32,15 @@ class SessionRequestProcessor extends KernelTestCase
         $session->start();
 
         // expected result
-        $expected = array(
-            'data' => array(
+        $expected = [
+            'data' => [
                 'session_token' => substr($session->getId(), 0, 8),
                 'user_id'       => null,
-            ),
-        );
+            ],
+        ];
 
         $sessionRequestProcessor = $this->container->get('skidder.processor.session_request');
-        $result                  = $sessionRequestProcessor->processRecord(array());
+        $result                  = $sessionRequestProcessor->processRecord([]);
 
         $this->assertEquals($expected, $result);
     }
