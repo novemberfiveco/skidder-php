@@ -53,12 +53,15 @@ Monolog will no longer throw an exception but just `return`.
 
 Releases
 -------------------
+__2.1.1 (2025/01/08)__
+* Fixed constructor of SessionRequestProcessor
+
 __2.1.0 (2025/01/08)__
 
 * Fixed deprecations for Symfony 4
 * Added support for Symfony 5
 * Added support for PHP 8.1
-* Bumped PHP min version to 8.0
+* Bumped PHP min version to 8.1
 
 __2.0.0 (2021/08/17)__
 

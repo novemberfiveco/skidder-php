@@ -17,11 +17,6 @@ class SessionRequestProcessor
      */
     private $user;
 
-    /**
-     * @param bool $logSessionToken
-     */
-    private $logSessionToken;
-
     public function __construct(private readonly SessionInterface $session, private readonly TokenStorageInterface $tokenStorage, private $logSessionToken = true)
     {
     }
