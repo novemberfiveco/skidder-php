@@ -9,7 +9,7 @@ class NewRelicPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        $container->setParameter('monolog.handler.newrelic.class', 'NovemberFive\SkidderBundle\Handler\SkidderNewRelicHandler');
+        $container->setParameter('monolog.handler.newrelic.class', \NovemberFive\SkidderBundle\Handler\SkidderNewRelicHandler::class);
     }
 
 }

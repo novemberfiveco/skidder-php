@@ -1,21 +1,17 @@
 <?php
 
 namespace NovemberFive\SkidderBundle\Processor;
+
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class RequestIdProcessor
 {
-    private $requestStack;
-    private $requestHeader;
-
     /**
      * @param RequestStack $requestStack
-     * @param string|null $requestHeader
+     * @param string|null  $requestHeader
      */
-    public function __construct(RequestStack $requestStack, $requestHeader)
+    public function __construct(private readonly RequestStack $requestStack, private $requestHeader)
     {
-        $this->requestStack     = $requestStack;
-        $this->requestHeader    = $requestHeader;
     }
 
     /**

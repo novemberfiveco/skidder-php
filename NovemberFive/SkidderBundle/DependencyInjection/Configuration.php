@@ -12,8 +12,9 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('skidder');
+        $treeBuilder = new TreeBuilder('skidder');
+        $rootNode = $treeBuilder->getRootNode();
+
         $rootNode
             ->children()
                 ->scalarNode('request_id_header')

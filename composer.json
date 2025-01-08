@@ -3,7 +3,7 @@
   "description": "Skidder will drag your logs to where they need to go. A small, uniform and extensible logging library, implemented across major technologies.",
   "homepage": "https://github.com/novemberfiveco",
   "require": {
-    "php": ">=5.3.3"
+    "php": "^8.0"
   },
   "repositories": [
     {

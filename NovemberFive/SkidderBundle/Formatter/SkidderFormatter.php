@@ -16,20 +16,16 @@ class SkidderFormatter extends JsonFormatter
 
     const LOGGING_CHANNEL_APP = 'app';
 
-    private $env;
-
-    public function __construct(string $env)
+    public function __construct(private readonly string $env)
     {
-        $this->env = $env;
-
         parent::__construct();
     }
 
-    public function format(array $record)
+    public function format(array $record): string
     {
-        $record['level'] = strtolower($record['level_name']);
+        $record['level'] = strtolower((string) $record['level_name']);
         $record['timestamp'] = $record['datetime']->format(\DateTime::ATOM);
-        $record['type'] = self::LOGGING_TYPE_EVENT; # TODO
+        $record['type'] = self::LOGGING_TYPE_EVENT;
         $record['environment'] = $this->env;
         $record['file'] = $this->getFileAndLineNumber();
 
@@ -54,7 +50,7 @@ class SkidderFormatter extends JsonFormatter
     private function getFileAndLineNumber() {
         $debug = debug_backtrace();
 
-        $trace = isset($debug[4]) ? $debug[4] : null;
+        $trace = $debug[4] ?? null;
 
         $fileName = $trace ? basename($trace['file']) : '';
         $lineNumber = $trace ? $trace['line'] : '';
